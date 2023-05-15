@@ -72,7 +72,7 @@ DELETE FROM user_tbl;
 	컬럼명은 모든 컬럼에 값을 집어넣을시 생략 가능합니다.*/
 INSERT INTO user_tbl
 	VALUES (null, '강개발', 1994, '경남', 178, '2020-08-02'),
-			(null, '최지선', 1998, '전북', 170, '2020-08-03'),
+			(null, '최지선', 1994, '전북', 170, '2020-08-03'),
             (null, '류가연', 2000, '전남', 158, '2020-08-20');
 SELECT * FROM user_tbl;		
             
@@ -138,3 +138,23 @@ DELETE FROM user_tbl WHERE user_num=4;
 -- 먼저 buy_tbl의 4번유저가 남긴 구매내역을 모두 삭제해야 합니다.
 DELETE FROM buy_tbl WHERE buy_num = 1;
 DELETE FROM buy_tbl WHERE buy_num = 2;
+
+-- 임시 테이블 user_tbl2 확인
+SELECT * FROM user_tbl2;
+
+-- 원본 테이블 user_tbl 확인
+SELECT * FROM user_tbl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -134,3 +134,20 @@ DELETE FROM user_tbl WHERE user_num = 4;
 -- 먼저 buy_tbl의 4번 유저가 남긴 구매내역을 모두 삭제해야 한다.
 DELETE FROM buy_tbl WHERE user_num = 1;
 DELETE FROM buy_tbl WHERE user_num = 2;
+
+-- DELETE FROM을 이용해서 user_tbl2의 2020-08-15 이후 가입자 삭제
+
+DELETE FROM user_tbl2 WHERE entry_date > '2020-08-15';
+
+-- DELETE FROM을 이용해서 2020-08-03일 가입한 유저만 삭제하는 쿼리문
+
+DELETE FROM user_tbl2 WHERE entry_date = '2020-08-03';
+
+-- DISTINCT는 특정 컬럼에 들어있는 데이터의 "종류"만 한 번씩 나열해서 보여준다.
+-- 교안을 보고 user_birth_year에 들어있는 데이터의 종류를 DISTINCT를 이용해 조회하기
+
+SELECT DISTINCT user_birth_year FROM user_tbl;
+
+-- 컬럼 이름을 바꿔서 조회하고 싶다면, 컬럼명 AS 바꿀 이름 형식을 쓰기
+SELECT user_name AS 유저명 FROM user_tbl;
+SELECT user_name AS 유저명, entry_date AS 가입날짜 FROM user_tbl;
